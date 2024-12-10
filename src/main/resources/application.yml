@@ -37,7 +37,7 @@ spring:
   cloud:
     gcp:
       credentials:
-        location: file:./src/main/resources/petstore-project-fakecredz.json
+        location: file:./src/main/resources/petstore-project-fake.json
 
 #  datasource:
 #    mydb:
