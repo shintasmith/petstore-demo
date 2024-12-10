@@ -38,10 +38,3 @@ spring:
     gcp:
       credentials:
         location: file:./src/main/resources/petstore-project-fake.json
-
-#  datasource:
-#    mydb:
-#      url: jdbc:oracle:thin:@(DESCRIPTION=(ENABLE=BROKEN)(ADDRESS=(PROTOCOL=TCP)(HOST=wcx4-scan.heb.com)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=dmst2_rw.heb.com)))
-#      driver-class-name: oracle.jdbc.OracleDriver
-#      username: ${db.username}
-#      password: ${db.password}

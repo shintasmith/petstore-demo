@@ -1,6 +1,7 @@
 package petstore.pubsub.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -8,6 +9,7 @@ import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.integration.config.EnableIntegration;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.http.dsl.Http;
+import org.springframework.messaging.MessageChannel;
 import petstore.pubsub.service.PetGroupHandler;
 
 @Configuration
@@ -19,8 +21,9 @@ public class IntegrationFlowConfig {
     PetGroupHandler petGroupHandler;
 
     @Bean
-    IntegrationFlow petStoreSubscriptionFlow() {
-        return IntegrationFlow.from("petStoreSubscriptionMessageChannel")
+    IntegrationFlow petStoreSubscriptionFlow(
+            @Qualifier("petStoreSubscriptionMessageChannel") MessageChannel petStoreSubscriptionChannel) {
+        return IntegrationFlow.from(petStoreSubscriptionChannel)
                 .enrichHeaders(spec -> spec.header("petStore.FlowName", "PetStoreIntake"))
                 .handle(petGroupHandler, "handle")
                 .get();
