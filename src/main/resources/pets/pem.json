@@ -1,0 +1,9 @@
+{
+  "name": "pem",
+  "type": "cat", 
+  "breed": "domestic short hair",
+  "status": "available",
+  "ageInMonths": 25,
+  "admittedSinceDate": "2024-09-01",
+  "dischargedDate": "2024-09-01"
+}

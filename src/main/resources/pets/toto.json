@@ -1,0 +1,9 @@
+{
+  "name": "toto",
+  "type": "dog", 
+  "breed": "terrier",
+  "status": "available",
+  "ageInMonths": 36,
+  "admittedSinceDate": "2024-08-01",
+  "dischargedDate": ""
+}

@@ -1,0 +1,9 @@
+{
+  "name": "fufu",
+  "type": "cat", 
+  "breed": "domestic short hair",
+  "status": "not_available",
+  "ageInMonths": 4,
+  "admittedSinceDate": "2024-08-01",
+  "dischargedDate": "2024-09-05"
+}

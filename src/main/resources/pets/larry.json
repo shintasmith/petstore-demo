@@ -1,0 +1,9 @@
+{
+  "name": "larry",
+  "type": "cat", 
+  "breed": "domestic short hair",
+  "status": "not_available",
+  "ageInMonths": 48,
+  "admittedSinceDate": "2022-09-01",
+  "dischargedDate": "2024-09-01"
+}

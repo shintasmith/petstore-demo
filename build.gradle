@@ -1,0 +1,62 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'jacoco'
+    id 'org.springframework.boot' version '3.3.3'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'com.diffplug.spotless' version '6.25.0'
+    id 'io.freefair.lombok' version '8.10'
+}
+
+group = 'petstore.pubsub'
+description = 'Pet Store PubSub'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // spring, spring boot, spring integration
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-integration'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.integration:spring-integration-http'
+    implementation 'me.paulschwarz:spring-dotenv:4.0.0'
+
+    // google pubsub
+    implementation 'com.google.cloud:spring-cloud-gcp-starter-pubsub:5.6.0'
+
+    // logging
+    implementation "org.slf4j:slf4j-api:2.0.16"
+    implementation 'net.logstash.logback:logstash-logback-encoder:7.4'
+    implementation "org.slf4j:jcl-over-slf4j:2.0.16"
+
+    // tests
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.integration:spring-integration-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+bootRun {
+    args = ["--spring.profiles.active=local"]
+}
+
+spotless {
+    java {
+        // https://github.com/palantir/palantir-java-format/tags
+        palantirJavaFormat('2.50.0')
+    }
+}
+
+compileJava.dependsOn 'spotlessApply'

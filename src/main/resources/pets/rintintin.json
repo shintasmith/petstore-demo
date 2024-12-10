@@ -1,0 +1,9 @@
+{
+  "name": "rintintin",
+  "type": "dog", 
+  "breed": "german shepherd",
+  "status": "available",
+  "ageInMonths": 30,
+  "admittedSinceDate": "2024-07-01",
+  "dischargedDate": ""
+}

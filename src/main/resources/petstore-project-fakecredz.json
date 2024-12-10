@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "petstore-project",
+  "private_key_id": "2b0588f2be25edb3543a3e6876d37595d854df29",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCHHoU7AYNvhsxs\n3XB5sEuSfcB7FeRn8wQcfJC74E/T07SdnnC2d5T8Ys7v3AJlKn8+CpPya53Xt6M/\nezttkbWhtKHDQzojsW1LV1gx6vLZxfa2GsxNGawL29eHB0sLZoY8uTBd8aYMU89J\n7OQBv0CGgJWtRKWaRjN0VEynrv+2GjybD0sXndVM4hS1b1zD4+fH3FIrtsNn7kcl\nS7/Ffb9o4JtrYW9XO0LBwIFcAXPtyDp48J7sHZKrm1ox/UHvBsC4JTc2rW0toO6B\nnpiaFTyJmAmwaLCQ+wjxgnJMAn/JNogy9bJ5xUJoUKu9m07todPzBeLlMRsCpFQt\n8mkMPB39AgMBAAECggEAECcPYULojfwM0xTTvdBb8Gq1CGHRGLYd7zPa74K8uENu\nK4uFyOJZvqQnPdhMtwBSDr4f+pJv35pV2yBltc796hNYZSnTuPGcca3C3tDJ8Euw\nlwt0EeF4RkClLsCp8XZzpK20wP5CzeV0+c7mYOkWkx2rBvgWXe93djgfo8oRSpkC\n3rkscmLXldYpcSaZjR96xg4eW/d02WMJ/bCqkGu5+RIiI6QBJ+BvDrOidJtEZ/r5\nhoYZMQhjLtI6PTZN1/crBhLIpPs8qlAM+y8ItDB6CO2hWIpi1+hJt41619ZN1rf3\nWoZcZoFsQ+o2CIjDurZoEu9rV+BTFN6PGREbnFjhkQKBgQC7kHS2B4aw5htQp8PX\nNdh26DURD4GZeHlumt59ZhcN7phho+O7nZOWAwXG5X8YuQCQ0J1WiNrc2LhiTqNM\nSij7WDT3dBPBnTMTOQLOFULOwzBFSrnQZz5G7yTKXDYnltWbPzM++7qtQWrNZk6W\niBeZ08j01sXV0RaHCAz0ow2rVQKBgQC4a2evEiwWo5g+Eldf2xf5vGIVAtts3GTF\n9Ppg59BawyE4VSMACzpHGhn9dQgQ5JSjlHAcvqLq6lnTQqIXB7HF7B/uuzxXv6e7\ng9EjaBPa6nlnO32nLtBsuunSsv/vJIv1Hxjl3NcTkHVd5mkn+DOgVnG91U/wLj/B\nfrPx3yy4CQKBgAeqzQqP3jKnBWDTqs7GVbXuohSzdJHIefZKgGPR44lfQn1jTLDj\nrR/Jude6k+p3zY0d6gCakY/LkCX8nvJEac50eZ3P8erNOURE5Vd1SQjYs8VxW40o\nW0RdDDz1bgVKRisVd0vQ0H26mdoRn47Ju2U/YgyYJvgplukoLBdn/uwNAoGBAI/U\nrKvdB2estasLkPugm6VZqEFs1gekKDA/7RqxEU4IS5tswvxgxVX45HZJ1T2fmNGv\njnTMtbFzjxT2Lga6KIsNqqX9f4WMY1wa5XywynN9VawOuOQv3bw/VufOVU+E+Gb3\nluqHf3Kxwue2MSNML6+IW/NLL6pJ182obN1iSrVJAoGBAIDNUA8gvgInHv+gjNh3\nQDmH2mGZ+RcuOttNpnS3pwyguNYem4AqsNqqZIU1Plp5S8x/EfCGiw5kbSvRm58g\nXyhL5Vfn7VGQ7Zji9Uo1ISE5Lp5BSYETKeLrLNSRHZboh39VDYX2SrGb7dZ6jgir\nPTADFT7+8JCfrwpL0cWBUC5Z\n-----END PRIVATE KEY-----\n",
+  "client_email": "test-sa@petstore-project.iam.gserviceaccount.com",
+  "client_id": "110213792560719686814",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-sa%40petstore-project.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

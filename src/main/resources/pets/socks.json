@@ -1,0 +1,9 @@
+{
+  "name": "socks",
+  "type": "cat", 
+  "breed": "domestic short hair",
+  "status": "not_available",
+  "ageInMonths": 58,
+  "admittedSinceDate": "2023-09-01",
+  "dischargedDate": ""
+}
