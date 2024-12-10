@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: petstore-pubsub
+  cloud:
+    gcp:
+      project-id: petstore-project
+      pubsub:
+        emulator-host: localhost:8681
+
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    properties:
+      hibernate:
+        boot:
+          allow_jdbc_metadata_access: false
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: info,health,loggers,metrics
+
+this:
+  # change this to a real subscription
+  petStoreSubscription: projects/petstore-project/subscriptions/petstore-intake-subscription
+
+logging:
+  level:
+   org.springframework.integration.aggregator: DEBUG
+   #org.springframework.jdbc: DEBUG
+
+--- # default, local, dev profile
+spring:
+  config:
+    activate:
+      on-profile: local, dev, test
+  cloud:
+    gcp:
+      credentials:
+        location: file:./src/main/resources/petstore-project-fake.json
+
+#  datasource:
+#    mydb:
+#      url: jdbc:oracle:thin:@(DESCRIPTION=(ENABLE=BROKEN)(ADDRESS=(PROTOCOL=TCP)(HOST=wcx4-scan.heb.com)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=dmst2_rw.heb.com)))
+#      driver-class-name: oracle.jdbc.OracleDriver
+#      username: ${db.username}
+#      password: ${db.password}
