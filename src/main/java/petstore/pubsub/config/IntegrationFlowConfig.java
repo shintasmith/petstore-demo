@@ -10,7 +10,9 @@ import org.springframework.integration.config.EnableIntegration;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.http.dsl.Http;
 import org.springframework.messaging.MessageChannel;
+import petstore.pubsub.domain.Pet;
 import petstore.pubsub.service.PetGroupHandler;
+import petstore.pubsub.service.PetOutputProcessor;
 
 @Configuration
 @EnableIntegration
@@ -22,9 +24,18 @@ public class IntegrationFlowConfig {
 
     @Bean
     IntegrationFlow petStoreSubscriptionFlow(
-            @Qualifier("petStoreSubscriptionMessageChannel") MessageChannel petStoreSubscriptionChannel) {
+            @Qualifier("petStoreSubscriptionMessageChannel") MessageChannel petStoreSubscriptionChannel,
+            PetOutputProcessor petOutputProcessor) {
         return IntegrationFlow.from(petStoreSubscriptionChannel)
                 .enrichHeaders(spec -> spec.header("petStore.FlowName", "PetStoreIntake"))
+                .aggregate(aggregatorSpec -> aggregatorSpec
+                        // .messageStore(jdbcMessageStore)
+                        .outputProcessor(petOutputProcessor)
+                        .expireGroupsUponCompletion(true)
+                        .groupTimeout(300 * 1000)
+                        .sendPartialResultOnExpiry(true)
+                        .correlationStrategy(message -> ((Pet) message.getPayload()).getBreed())
+                        .releaseStrategy(group -> group.size() >= 2))
                 .handle(petGroupHandler, "handle")
                 .get();
     }
