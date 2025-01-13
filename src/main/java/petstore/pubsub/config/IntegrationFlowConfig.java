@@ -35,7 +35,7 @@ public class IntegrationFlowConfig {
                         .groupTimeout(300 * 1000)
                         .sendPartialResultOnExpiry(true)
                         .correlationStrategy(message -> ((Pet) message.getPayload()).getBreed())
-                        .releaseStrategy(group -> group.size() >= 2))
+                        .releaseStrategy(group -> group.size() >= 3))
                 .handle(petGroupHandler, "handle")
                 .get();
     }
